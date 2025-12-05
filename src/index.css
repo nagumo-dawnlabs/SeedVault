@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, #0f0f0f 0%, #050505 45%), #050505;
+  color: #f7f9fb;
+  font-family: 'Sora', 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Grid Background */
+.bg-grid {
+  background-image: linear-gradient(to right, #111416 1px, transparent 1px),
+    linear-gradient(to bottom, #111416 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black 45%, transparent 100%);
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-black/40 backdrop-blur-sm border border-colosseum-border;
+  }
+
+  .btn-primary {
+    @apply bg-colosseum-green-dark text-white border border-colosseum-green/40 hover:border-colosseum-green hover:shadow-neon transition-all uppercase tracking-wider font-semibold px-7 py-3 rounded-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-black border border-white/40 hover:border-colosseum-green hover:text-colosseum-green transition-all uppercase tracking-wider font-semibold px-7 py-3 rounded-sm;
+  }
+}
